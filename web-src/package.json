@@ -2,6 +2,10 @@
   "name": "robotscostrent",
   "version": "1.0.0",
   "description": "",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/s-robertson/robotscostrent.git"
@@ -14,8 +18,18 @@
   "homepage": "https://github.com/s-robertson/robotscostrent#readme",
   "devDependencies": {
     "browser-sync": "^2.11.1",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^2.2.0",
-    "gulp-sourcemaps": "^1.6.0"
+    "browser-sync-webpack-plugin": "^1.0.1",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "node-sass": "^3.4.2",
+    "resolve-url-loader": "^1.4.3",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.14"
+  },
+  "dependencies": {
+    "bootstrap-loader": "^1.0.10",
+    "bootstrap-sass": "^3.3.6"
   }
 }
