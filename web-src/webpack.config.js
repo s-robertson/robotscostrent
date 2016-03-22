@@ -1,4 +1,5 @@
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: "./entry.js",
@@ -10,7 +11,7 @@ module.exports = {
     loaders: [
       {
         test: /\.scss$/,
-        loaders: ["style", "css", "sass"]
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,
@@ -19,6 +20,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new ExtractTextPlugin("style.css"),
     new BrowserSyncPlugin(
       {
         host: 'localhost',
