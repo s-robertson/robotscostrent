@@ -1,0 +1,6 @@
+
+@mixin sprite-button() {
+  @include text-hide();
+  background: url('../images/sprite.png');
+  display: block;
+}

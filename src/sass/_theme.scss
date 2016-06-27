@@ -1,0 +1,55 @@
+#main-nav {
+}
+
+.jumbotron {
+
+  &.green {
+    background-color: $brand-primary;
+    color: #fff;
+  }
+
+  &.dark-green {
+    background-color: $brand-dark;
+  }
+
+  &.no-margin {
+    margin: 0;
+  }
+}
+
+.sprite-button {
+  @include sprite-button();
+}
+
+#profile-buttons {
+  background: $brand-dark;
+  padding: 20px 0;
+}
+
+.profile-button {
+  display: inline-block;
+  margin: 0 30px;
+  vertical-align: middle;
+
+  @media (max-width: $screen-sm-min) {
+    margin: 0 15px;
+  }
+
+  &.github {
+    background-position: 0 0;
+    width: 67px;
+    height: 19px;
+  }
+
+  &.drupal {
+    width: 86px;
+    height: 23px;
+    background-position: -76px 0;
+  }
+
+  &.linkedin {
+    width: 100px;
+    height: 25px;
+    background-position: -172px 0;
+  }
+}
